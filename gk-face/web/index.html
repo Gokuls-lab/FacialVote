@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face ID voting system</title>
+    <script type="text/javascript" src="../eel.js"></script> 
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 40px;
+            padding-left: 20%;
+        }
+        .logo{
+            width:4%;
+            position:absolute;
+            top:8%;
+            left: 70%;
+        }
+        h2{
+            margin-left: 40%;
+        }
+        form{
+            margin-left: 30%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 18px;
+            width: 500px;
+            padding: 5%;
+            padding-bottom: 2%;
+            border-radius: 10px;
+        }
+        input{
+            margin-bottom: 20px;
+            border: 0px;
+            border-bottom: 3px solid rgb(235,235,235);
+            padding: 15px;
+            padding-left: 10px;
+            margin-right: 30px;
+            outline: none;
+            text-decoration: none;
+        }
+        .full{
+            width:450px;
+        }
+        .reg{
+            width: 180px;
+            margin-left: 30%;
+            margin-top: 40px;
+            border-radius: 7px;
+            background-color: rgb(137, 145, 237);
+            background-color: rgb(241,48,5);
+            color:white;
+            font-weight: bold;
+        }
+        .r{
+            position: absolute;
+            /*background-color: rgb(255,200,1);*/
+            width: 30%;
+            height: 100vh;
+            left: 0px;
+            top: 0px;
+            background:rgb(255,200,1) url("hand.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .verifyp{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+            top:-100%;
+            left: 0px;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+        .verifyc{
+            position: absolute;
+            width: 40%;
+            height: 45%;
+            background-color: rgb(250,250,250);
+            top: 20%;
+            left: 35%;
+            border-radius: 10px;
+        }
+    </style>
+    <h2>Register</h2>        <img class="logo" src="logo.png" alt="">
+    <div class="r">
+    </div>
+
+    <form action="">
+        <input type="text" name="fname" id="fname" placeholder="First Name" required autocomplete="off">
+        <input type="text" name="lname" id="lname" placeholder="Last Name" required autocomplete="off"><br>
+        <input type="tel" name="num" id="num" placeholder="Phone Number" required autocomplete="off" class="full"><br>
+        <input type="text" name="place" id="place" placeholder="Address" required autocomplete="off" class="full">
+        <input type="button" value="Register" class="reg" onclick="reg()">
+
+
+    </form>
+    
+    <div class="verifyp" id="v">
+        <div class="verifyc" id="v2">
+            <img style="margin-left: 5%;" width="90%" src="face-id2.gif" alt="">
+        </div>
+    </div>
+    <script>
+        function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+        function reg(){
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+            var num=document.getElementById("num").value;
+            var place=document.getElementById("place").value;
+            
+        eel.register(fname,lname,num,place)(async function(a){
+            document.getElementById("v").style.top="0px";
+            //alert(a);
+            document.getElementById("v2").innerHTML='<h5 style="margin-left: 15%;margin-top: 20%;">User Added successful !!</h5>';
+                await sleep(3000);
+                location.href="login.html";
+        })
+        document.getElementById("fname").value="";
+        document.getElementById("lname").value="";
+        document.getElementById("num").value="";
+        document.getElementById("place").value="";
+    }
+    </script>
+</body>
+</html>
