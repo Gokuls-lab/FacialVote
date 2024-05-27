@@ -1,4 +1,6 @@
 # FacialVote
+![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white)
+<br>
 Facial recognition-based voting system
 
 # Facial Recognition-Based Voting System
@@ -87,4 +89,4 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-
+[![Signal](https://img.shields.io/badge/Signal-%23039BE5.svg?style=for-the-badge&logo=Signal&logoColor=white)](https://signal.me/#eu/yRIZk3K7V99MA74Eajs6bYLO3baN9nxTvQcp4Z8N8K5b8WbKewpKl4PKxVgM5Kyj) [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Gokulyadav4)
